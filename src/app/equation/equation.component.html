@@ -1,3 +1,16 @@
 <form [formGroup]="mathForm">
-    {{a}} + {{b}} = <input type="number" formControlName="answer" />
+    {{a}} + {{b}} = 
+    <input 
+    #answer 
+    appAnswerHighlight
+    [ngClass]="{highlight: highlightValidation(a,b,answer.value)}" 
+    type="number" 
+    formControlName="answer" />
 </form>
+<div>form is valid: {{mathForm.valid}}</div>
+<div>form value: {{mathForm.value | json}}</div>
+<div>form group errors: {{mathForm.errors | json}}</div>
+
+<div>form value: {{correct}}</div>
+<div>form group errors: {{correctPerSolution}}</div>
+
