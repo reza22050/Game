@@ -3,10 +3,11 @@
     <input 
     #answer 
     appAnswerHighlight
-    [ngClass]="{highlight: highlightValidation(a,b,answer.value)}" 
     type="number" 
     formControlName="answer" />
 </form>
+<!-- [ngClass]="{highlight: highlightValidation(a,b,answer.value)}"  -->
+
 <div>form is valid: {{mathForm.valid}}</div>
 <div>form value: {{mathForm.value | json}}</div>
 <div>form group errors: {{mathForm.errors | json}}</div>
